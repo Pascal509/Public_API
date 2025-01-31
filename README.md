@@ -19,7 +19,7 @@ pip install flask flask-cors
 python app.py
 #API would run on default; http://127.0.0.1:5000/ in browser
 
-Alternatively you can use ✅ cURL (Command Line):
+Use ✅ cURL (Command Line):
 # Test the GET request
 curl -X GET http://127.0.0.1:5000/
 
