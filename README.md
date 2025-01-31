@@ -36,6 +36,20 @@ curl -X DELETE http://127.0.0.1:5000/about/1
 DEPLOYED END POINT
 
 
-Sample Request & Response
-Link to your GitHub Repository
-Backlink (e.g., Python Developers)
+GET REQUEST
+curl -X GET http://127.0.0.1:5000/
+
+RESPONSE(200 OK)
+{
+  "current_datetime": "2025-01-31T14:24:21.951041Z",
+  "email": "chinemeremezenagu@gmail.com",
+  "github_url": "https://github.com/Pascal509/Public_API",
+  "id": 1,
+  "name": "Ezenagu Chinemerem"
+}
+
+LINK TO GITHUB REPOSITORY
+https://github.com/Pascal509/Public_API
+
+BACKLINK (Python Developers)
+https://hng.tech/hire/python-developers
