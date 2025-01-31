@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from datetime import datetime
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app) # Allow cross-origin requests
@@ -28,7 +29,7 @@ def create_about():
     data = request.get_json()
     new = {"id": len(about) + 1, "name": data.get("name")}
     about.append(new)
-    return jsonify({"message": "Item created", "item": new}), 201
+    return jsonify({"message": "Item created", "item": new}), 200
 
 #Update existing about page
 @app.route("/about/<int:about_id>", methods=["PUT"])
@@ -48,4 +49,4 @@ def delete_item(about_id):
     return jsonify({"message": "person deleted"})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
