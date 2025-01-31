@@ -1,2 +1,41 @@
-# Public_API
-Developing a public API to retrieve basic information...
+PROJECT DESCRIPTION
+
+This is a Flask-based REST API that provides a publicly accessible endpoint to retrieve basic information, including the developer's name, email, GitHub repository link, and the current UTC timestamp.
+
+Additionally, the API includes CRUD (Create, Read, Update, Delete) functionality for managing an "About" section, allowing users to:
+
+Retrieve stored personal entries (GET /about)
+Add new entries (POST /about)
+Update existing entries (PUT /about/<id>)
+Delete entries (DELETE /about/<id>)
+
+
+HOW TO RUN LOCALLY
+
+git clone https://github.com/Pascal509/Public_API.git
+cd Public_API
+#Install necessary packages and dependencies; 
+pip install flask flask-cors
+python app.py
+#API would run on default; http://127.0.0.1:5000/ in browser
+
+Alternatively you can use ✅ cURL (Command Line):
+# Test the GET request
+curl -X GET http://127.0.0.1:5000/
+
+# Test the POST request (Create a new entry)
+curl -X POST http://127.0.0.1:5000/about -H "Content-Type: application/json" -d '{"name": "Ezenagu Chinemerem"}'
+
+# Test the PUT request (Update an entry with id 1)
+curl -X PUT http://127.0.0.1:5000/about/1 -H "Content-Type: application/json" -d '{"name": "Updated Name"}'
+
+# Test the DELETE request (Delete entry with id 1)
+curl -X DELETE http://127.0.0.1:5000/about/1
+
+
+DEPLOYED END POINT
+
+
+Sample Request & Response
+Link to your GitHub Repository
+Backlink (e.g., Python Developers)
